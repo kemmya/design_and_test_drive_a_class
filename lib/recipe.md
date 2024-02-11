@@ -39,6 +39,7 @@ class MusicLibrary:
         pass # No code here yet
     def search_by_heading(self, heading):
         # Parameter: topic string
+        # side effect: search the heading of all tracks
         # Return => List of tracks with heading
         pass
     ```
