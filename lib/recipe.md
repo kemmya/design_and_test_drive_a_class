@@ -24,18 +24,18 @@ class MusicLibrary:
         # Parameters: => None
         #   Returns => Nothing
         # Side effects: Empty list in new variable track
-        pass # No code here yet
+        pass 
 
     def add(self, track):
         # Parameters: track string
-        #   task: string representing a single track
+        #   track: string representing a single track
         # Returns:
-        #   string track to music list
-        pass # No code here yet
+        #   Nothing
+        pass 
 
     def all_tracks(self):
         # Returns:
-        #  List of all tracks user listen to
+        #  List of instances of tracks user listen to
         pass # No code here yet
     def search_by_heading(self, heading):
         # Parameter: topic string
@@ -51,38 +51,28 @@ _Make a list of examples of how the class will behave in different situations._
 ``` python
 
 
-"""
-Initially no track was given
-"""
-music_library = MusicLibrary()
-music_library.track() # => []
 
-"""
-Add one track to list of music
-User listen to
-"""
-music_library = MusicLibrary
-music_library.add("Let her go") # => [Let her go"]
 
 """
 all tracks  user listens to
 Returns all the tracks
 """
-music_library = MusicLibrary
+music_library = MusicLibrary()
 music_library.add("Let her go")
 music_library.add("Survivors")
 music_library.add("Holes")
-music_libray.all_tracks() #  => ["Let her go" "Survivors" "When we were young"]  
+music_libray.all_tracks() #  => ["Let her go", "Survivors", "Holes"]  
 
 """ 
 When i search track by heading to 
 Return all tracks user listens to
 """
-music_library = MusicLibrary
-music_library.add("Let her go") 
+music_library = MusicLibrary()
+music_library.add("Let her go")
 music_library.add("Survivors")
-music_library.add("Holes")
-music_library.search_by_heading() # => [] -returns list of all tracks by heading
+music_library.add("Holes") 
+music_library.search_by_title("Let her go", "Survivors", "Holes") #=> ["Let her go", "Survivors", "Holes"]
+
 ```
 
 _Encode each example as a test. You can add to the above list as you go._
@@ -93,25 +83,14 @@ _After each test you write, follow the test-driving process of red, green, refac
 
 ``` python
 
-"""
-When initially no track was given
-"""
-def test_initially_no_track_given():
 
 """
-when i add one track to list of music
+when i add multiple tracks to list of music
 User listen to
 """
-def test_add_one_track_to_list_of_music():
+def test_add_multiple_tracks_to_list_of_music():
 
 """
-When all tracks are added
-Returns all the tracks
+when all tracks are searched by the heading
 """
-def test_all_tracks_in_music_list():
-
-""" 
-When i search track by heading to 
-Return all tracks user listens to
-"""
-def test_search_track_by_heading():
+def test_search_by_title():
